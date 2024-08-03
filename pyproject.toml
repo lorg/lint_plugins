@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "lint-plugins"
+version = "0.1.0"
+description = "A collection of useful linter plugins"
+authors = ["Imri Goldberg"]
+license = "BSD-3-Clause"
+readme = "README.md"
+
+[tool.poetry.urls]
+homepage = "https://github.com/lorg/lint_plugins"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flake8-pyproject = "^1.2.3"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.0"
+ruff = "^0.5.6"
+mypy = "^1.11.1"
+pytest = "^8.3.2"
+ipython = "^8.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.poetry.plugins."flake8.extension"]
+"LTP001" = "lint_plugins.missing_timezone:TimezoneChecker"
+"LTP002" = "lint_plugins.mistyped_nullable_column:NullableColumnChecker"
