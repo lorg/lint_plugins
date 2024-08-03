@@ -19,7 +19,7 @@ This project was born from a concrete need I had in my projects, and after repea
 
 - Ruff doesn't allow plugins
 - Flake8 is fast and stable, and allows plugins
-- The plugins are allowed are of the right type: more detections, as opposed to say, mypy.
+- The plugins flake8 allows are of the right type: detections, as opposed to say, mypy that doesn't allow them.
 
 ## Missing Timezone
 
