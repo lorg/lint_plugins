@@ -1,0 +1,8 @@
+[flake8]
+max-line-length = 120
+
+; [flake8:local-plugins]
+; extension =
+;     MTZ001 = lint_plugins.missing_timezone:TimezoneChecker
+;     ; T002 = lint_plugins.mistyped_nullable_column:NullableColumnChecker
+; paths = lint_plugins/
